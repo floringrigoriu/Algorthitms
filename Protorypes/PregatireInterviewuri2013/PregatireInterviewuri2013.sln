@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PregatireInterviewuri2013", "PregatireInterviewuri2013\PregatireInterviewuri2013.csproj", "{A63477A4-A86F-4D76-AE69-F22E934FCC22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{38066815-EDD1-42AE-A3DA-8B30522267E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A63477A4-A86F-4D76-AE69-F22E934FCC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63477A4-A86F-4D76-AE69-F22E934FCC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63477A4-A86F-4D76-AE69-F22E934FCC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63477A4-A86F-4D76-AE69-F22E934FCC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38066815-EDD1-42AE-A3DA-8B30522267E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38066815-EDD1-42AE-A3DA-8B30522267E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38066815-EDD1-42AE-A3DA-8B30522267E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38066815-EDD1-42AE-A3DA-8B30522267E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
