@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PregatireInterviewuri2013
 {
+    /// <summary>
+    /// Add comment for this thingie :-)
+    /// </summary>
     public class backtracking
     {
         public static IEnumerable<string> GetPermutations(string input)
