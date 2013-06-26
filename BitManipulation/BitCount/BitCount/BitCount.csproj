@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitShiftCounter.cs" />
+    <Compile Include="BitXorCounter.cs" />
     <Compile Include="IBitCounter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,11 +6,11 @@ using System.Numerics;
 namespace BitCountTest
 {
     [TestClass]
-    public class BitShifterTest:BitCounterBaseTest
+    public class BitXorCounterTest : BitCounterBaseTest
     {
         protected override IBitCounter GetCounter()
         {
-            return new BitShiftCounter();
+            return new BitXorCounter();
         }
 
         ///// <summary>
