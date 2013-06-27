@@ -54,6 +54,7 @@
     <Compile Include="BitShifterTest.cs" />
     <Compile Include="BitCounterBaseTest.cs" />
     <Compile Include="BitXorCounterTest.cs" />
+    <Compile Include="BitMaskCounterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
