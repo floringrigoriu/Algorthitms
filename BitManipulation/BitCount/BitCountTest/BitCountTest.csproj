@@ -55,6 +55,7 @@
     <Compile Include="BitCounterBaseTest.cs" />
     <Compile Include="BitXorCounterTest.cs" />
     <Compile Include="BitMaskCounterTest.cs" />
+    <Compile Include="HardwareCounterTest.cs" />
     <Compile Include="ModuloBitCounterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

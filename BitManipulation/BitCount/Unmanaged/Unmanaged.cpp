@@ -14,14 +14,23 @@ extern "C" __declspec(dllexport) int AsmPopulationCount(int num);
 
 extern "C" __declspec(dllexport) int AsmPopulationCount64(__int64 num);
 
+extern "C" __declspec(dllexport) int AsmPopulationCountArray(int* data, int size);
+
 // C binary exposing function to access POPCNT and other intrinsecs 
 // in order to use hardware optimization for fast operations
 //
 int _tmain(int argc, _TCHAR* argv[])
 {
+	int* inputArray = new int [4];
+	inputArray[0] = 0x55555555;
+	inputArray[1] = 0x55555555;
+	inputArray[2] = 0x55555555;
+	inputArray[3] = 0x55555555;
+	
 	cout << "Hello world" << endl;
 	cout << "32 Bit population count " << AsmPopulationCount(0x55555555)<< endl;
-	cout << "64 Bit population count " << AsmPopulationCount64(0x5555555555555555L);
+	cout << "64 Bit population count " << AsmPopulationCount64(0x5555555555555555L)<< endl;
+	cout << "128 Bit population count " << AsmPopulationCountArray(inputArray,4)<< endl;
 	return 0;
 }
 
@@ -66,3 +75,12 @@ extern "C" __declspec(dllexport) int AsmPopulationCount64(__int64 num)
 
 // TODO : Pop count on MMX / SSE intrinsecs
 //
+extern "C" __declspec(dllexport) int AsmPopulationCountArray(int* data, int size)
+{
+	int retVal =0;
+	for(int index =0 ;index < size; index++)
+	{
+		retVal += 	__popcnt(data[index]);
+	}
+	return retVal;
+}
