@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitShiftCounter.cs" />
+    <Compile Include="BitSwap.cs" />
     <Compile Include="BitXorCounter.cs" />
     <Compile Include="BitMaskCounter.cs" />
     <Compile Include="ModuloBitCounter.cs" />

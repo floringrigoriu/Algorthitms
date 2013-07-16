@@ -59,6 +59,7 @@
     <Compile Include="ParityCounterTest.cs" />
     <Compile Include="ModuloBitCounterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BitSwapTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BitCount\BitUtilities.csproj">
