@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -55,14 +56,14 @@
     <Compile Include="BitCounterBaseTest.cs" />
     <Compile Include="BitXorCounterTest.cs" />
     <Compile Include="BitMaskCounterTest.cs" />
-    <Compile Include="HardwareCounterTest.cs" />
+    <Compile Include="ParityCounterTest.cs" />
     <Compile Include="ModuloBitCounterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BitCount\BitCount.csproj">
+    <ProjectReference Include="..\BitCount\BitUtilities.csproj">
       <Project>{876c6f06-b77f-4505-8c67-1caaebf256e9}</Project>
-      <Name>BitCount</Name>
+      <Name>BitUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

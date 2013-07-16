@@ -47,6 +47,7 @@
     <Compile Include="BitMaskCounter.cs" />
     <Compile Include="ModuloBitCounter.cs" />
     <Compile Include="IBitCounter.cs" />
+    <Compile Include="ParityCounter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

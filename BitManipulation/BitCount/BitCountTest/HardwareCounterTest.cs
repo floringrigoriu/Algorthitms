@@ -6,13 +6,13 @@ using System.Numerics;
 
 namespace BitCountTest
 {
-    [TestClass]
-    public class HardwareCounterTest : BitCounterBaseTest
-    {
+    //[TestClass]
+    //public class HardwareCounterTest : BitCounterBaseTest
+    //{
 
-        protected override IBitCounter GetCounter()
-        {
-            return new HardwareCounter();
-        }
-    }
+    //    protected override IBitCounter GetCounter()
+    //    {
+    //        return new HardwareCounter();
+    //    }
+    //}
 }
