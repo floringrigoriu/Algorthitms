@@ -54,7 +54,7 @@ namespace SortingImplementations
 
             while (readLow < readUpper)
             {
-                while (comparer.Compare(input[readLow],target) <=0 && readLow <= readUpper)
+                while (readLow <= readUpper && comparer.Compare(input[readLow],target) <=0 )
                 {
                     if (comparer.Compare(input[readLow], target) != 0)
                     {
@@ -64,7 +64,7 @@ namespace SortingImplementations
                     readLow++;
                 }
 
-                while (comparer.Compare(input[readUpper], target) >= 0 && readLow <= readUpper)
+                while (readLow <= readUpper && comparer.Compare(input[readUpper], target) >= 0)
                 {
                     if (comparer.Compare(input[readUpper], target) != 0)
                     {
