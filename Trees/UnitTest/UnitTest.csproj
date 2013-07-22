@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="NthNodeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HeapTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Trees\Trees.csproj">
