@@ -62,16 +62,25 @@ namespace Maze
                 OrderByDescending(a=>a.Lenght).
                 ToList();
 
+            var first = arches.First();
+            visited.Add(first.Start);
+            visited.Add(first.End);
+            first.Start.Neighbours[first.End] = 0; // connection marked for keeping
+            first.End.Neighbours[first.Start] = 0; // connection marked for keeping
+
             while(visited.Count < lenght * heigh  && arches.Any())
             {
-                var arch = arches.ElementAt(0);
-                arches.RemoveAt(0);
-                if((!visited.Contains(arch.Start)) || (!visited.Contains(arch.End)))
+                foreach (var arch in arches)
                 {
-                    visited.Add(arch.Start); 
-                    visited.Add(arch.End);
-                    arch.Start.Neighbours[arch.End] =0; // connection marked for keeping
-                    arch.End.Neighbours[arch.Start] =0; // connection marked for keeping
+                    if ((!visited.Contains(arch.Start)) ^ (!visited.Contains(arch.End)))
+                    {
+                        visited.Add(arch.Start);
+                        visited.Add(arch.End);
+                        arch.Start.Neighbours[arch.End] = 0; // connection marked for keeping
+                        arch.End.Neighbours[arch.Start] = 0; // connection marked for keeping
+                        arches.Remove(arch);
+                        break;
+                    }
                 }
             }
 
