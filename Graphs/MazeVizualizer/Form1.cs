@@ -87,16 +87,35 @@ namespace MazeVizualizer
             }
             
             // do display it
-            var dataSet = new string[mazeString.GetLength(1)][];
-            for(int i=0;i<dataSet.Length;i++)
+            this.dataGridView1.Rows.Clear();
+            this.dataGridView1.Columns.Clear();
+            this.dataGridView1.DefaultCellStyle.Font =
+                new System.Drawing.Font("Lucida Sans Unicode", 10F,
+                                     System.Drawing.FontStyle.Regular,
+                                     System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                
+            for(int index=0;index<mazeString.GetLength(0);index++)
             {
-                dataSet[i] = new String[mazeString.GetLength(0)];
-                for (int j = 0; j < dataSet[i].Length; j++)
-                {
-                    dataSet[i][j] = mazeString[j, i];
-                }
+                this.dataGridView1.Columns.Add(index.ToString(),index.ToString());
             }
-            //this.dataGridView1.DataSource = dataSet;
+            this.dataGridView1.SuspendLayout();
+            for(int index=0;index<mazeString.GetLength(1);index++)
+            {
+                var row = new DataGridViewRow();
+                row.HeaderCell.Value = index.ToString();
+                for(int i=0;i<mazeString.GetLength(0);i++)
+                {
+                    row.Cells.Add(new DataGridViewTextBoxCell() {  Value = mazeString[i,index]});
+                }
+                this.dataGridView1.Rows.Add(row);
+                
+            }
+            this.dataGridView1.ResumeLayout(true);
+        }
+
+        private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
