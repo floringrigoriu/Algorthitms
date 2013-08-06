@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Graphs;
+using Maze;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,8 +30,15 @@ namespace MazeVizualizer
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var maze = this.generator.GetMaze(int.Parse(this.toolStripTextBox2.Text),int.Parse(this.toolStripTextBox1.Text));
+            var maze = this.generator.GetMaze(
+                int.Parse(this.toolStripTextBox2.Text),
+                int.Parse(this.toolStripTextBox1.Text),
+                int.Parse(this.toolStripTextBox3.Text)
+                );
             var mazeString = new String[maze.GetLength(1),maze.GetLength(0)];
+            GraphNode<MazeNode,int> start = null;
+            GraphNode<MazeNode,int> end = null;
+
             for(int i=0;i<maze.GetLength(1) ;i++)
             {
                 for(int j=0;j<maze.GetLength(0);j++)
@@ -38,8 +47,8 @@ namespace MazeVizualizer
                     var strCell = String.Empty;
                     switch(mazeCell.Value.Type)
                     {
-                        case Maze.CellType.start : strCell = "S";break;
-                        case Maze.CellType.end : strCell = "E";break;
+                        case Maze.CellType.start : strCell = "S"; start = mazeCell; break;
+                        case Maze.CellType.end : strCell = "E";end = mazeCell ; break;
                         case Maze.CellType.empty : strCell = "";break;
                         default : throw new Exception("Unsuported cell type:" + mazeCell.Value.Type);
                     }
@@ -85,7 +94,12 @@ namespace MazeVizualizer
                     mazeString[i,j] = strCell;
                 }
             }
+
+            // solve it
             
+            var mazeSolver = new MazeSolver();
+            var path =  mazeSolver.Solve(maze,start.Value.X , start.Value.Y,end.Value.X,end.Value.Y).ToList();
+
             // do display it
             this.dataGridView1.Rows.Clear();
             this.dataGridView1.Columns.Clear();
@@ -105,7 +119,12 @@ namespace MazeVizualizer
                 row.HeaderCell.Value = index.ToString();
                 for(int i=0;i<mazeString.GetLength(0);i++)
                 {
-                    row.Cells.Add(new DataGridViewTextBoxCell() {  Value = mazeString[i,index]});
+                    var cell = new DataGridViewTextBoxCell() { Value = mazeString[i, index] };
+                    row.Cells.Add(cell);
+                    if(path.Any(p=>p.Value.X == index && p.Value.Y == i))
+                    {
+                        cell.Style.BackColor = Color.Green;
+                    }
                 }
                 this.dataGridView1.Rows.Add(row);
                 
@@ -114,6 +133,11 @@ namespace MazeVizualizer
         }
 
         private void toolStripTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
         {
 
         }

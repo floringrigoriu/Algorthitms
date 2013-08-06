@@ -37,6 +37,9 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -50,10 +53,13 @@
             this.toolStripLabel2,
             this.toolStripTextBox2,
             this.toolStripSeparator2,
+            this.toolStripLabel3,
+            this.toolStripTextBox3,
+            this.toolStripSeparator3,
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(516, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(638, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -68,7 +74,8 @@
             // 
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox1.Text = "5";
+            this.toolStripTextBox1.Text = "10";
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             // 
             // toolStripSeparator1
             // 
@@ -85,7 +92,7 @@
             // 
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
-            this.toolStripTextBox2.Text = "4";
+            this.toolStripTextBox2.Text = "10";
             this.toolStripTextBox2.Click += new System.EventHandler(this.toolStripTextBox2_Click);
             // 
             // toolStripSeparator2
@@ -99,8 +106,8 @@
             this.toolStripButton1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(58, 22);
-            this.toolStripButton1.Text = "Generate";
+            this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
+            this.toolStripButton1.Text = "Generate & solve";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // dataGridView1
@@ -111,14 +118,31 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(36, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(442, 164);
+            this.dataGridView1.Size = new System.Drawing.Size(564, 215);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(39, 22);
+            this.toolStripLabel3.Text = "Loops";
+            // 
+            // toolStripTextBox3
+            // 
+            this.toolStripTextBox3.Name = "toolStripTextBox3";
+            this.toolStripTextBox3.Size = new System.Drawing.Size(100, 25);
+            this.toolStripTextBox3.Text = "5";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 256);
+            this.ClientSize = new System.Drawing.Size(638, 307);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
@@ -142,6 +166,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
