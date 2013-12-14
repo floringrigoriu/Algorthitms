@@ -1,7 +1,7 @@
 ﻿
 namespace Problem1
 {
-    public class Problem1
+    public class Problem1 : IProblem
     {
         public int Solve(int limit)
         {
