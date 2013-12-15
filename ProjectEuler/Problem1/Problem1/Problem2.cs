@@ -14,15 +14,15 @@ namespace Problem1
                 " do not exceed four million, find the sum of the even-valued terms."; }
         }
 
-        public int Solve(int limit)
+        public long Solve(long limit)
         {
             if(limit < 0)
             {
                 throw new ArgumentException("negative limit not supported");
             }
-            var result = 0;
-            int last = 0;
-            int current = 1;
+            long result = 0;
+            long last = 0;
+            long current = 1;
             while (last < limit)
             {
                 if (last % 2 == 0) { result += last; };

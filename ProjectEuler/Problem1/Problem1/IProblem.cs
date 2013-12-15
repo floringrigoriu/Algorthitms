@@ -14,6 +14,6 @@ namespace Problem1
         /// <summary>
         /// Do solve it
         /// </summary>
-        int Solve(int limit);
+        long Solve(long limit);
     }
 }

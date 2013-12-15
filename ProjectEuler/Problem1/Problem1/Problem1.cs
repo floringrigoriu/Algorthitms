@@ -3,10 +3,11 @@ namespace Problem1
 {
     public class Problem1 : IProblem
     {
-        public int Solve(int limit)
+        public long Solve(long limit)
         {
-            int result = 0;
-            for (int i = 1; i < limit; i++) {
+            long result = 0;
+            for (long i = 1; i < limit; i++)
+            {
                 if (i % 3 == 0 || i % 5 == 0)
                 {
                     result+=i;

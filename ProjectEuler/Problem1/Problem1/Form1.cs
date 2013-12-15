@@ -13,7 +13,7 @@ namespace Problem1
 {
     public partial class Form1 : Form
     {
-        public delegate void UIUpdater(int r, Cursor c);
+        public delegate void UIUpdater(long r, Cursor c);
         IProblem problem = null;
 
         public Form1()
@@ -49,11 +49,11 @@ namespace Problem1
                 MessageBox.Show("do select a problem from the <<Operations>> menu");
                 return;
             }
-            int size = int.Parse(this.SizeTextBox.Text);
+            long size = long.Parse(this.SizeTextBox.Text);
             var currentCursor = this.Cursor;
             this.Cursor = Cursors.WaitCursor;
-            var task = new Task<int>(()=>size);
-            var cont = task.ContinueWith<int>((r) => this.problem.Solve(r.Result))
+            var task = new Task<long>(()=>size);
+            var cont = task.ContinueWith<long>((r) => this.problem.Solve(r.Result))
                .ContinueWith(r =>
                 {
                     this.Invoke(new UIUpdater(this.UpdateUI), r.Result,  currentCursor);
@@ -63,7 +63,7 @@ namespace Problem1
             task.Start(TaskScheduler.FromCurrentSynchronizationContext());
         }
 
-        private void UpdateUI(int r , Cursor c)
+        private void UpdateUI(long r , Cursor c)
         {
             this.ResultLabel.Text = r.ToString();
             this.Cursor = c;
