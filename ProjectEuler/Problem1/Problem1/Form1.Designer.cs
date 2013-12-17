@@ -57,7 +57,7 @@
             this.DescriptionLabel.Multiline = true;
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.ReadOnly = true;
-            this.DescriptionLabel.Size = new System.Drawing.Size(221, 45);
+            this.DescriptionLabel.Size = new System.Drawing.Size(221, 99);
             this.DescriptionLabel.TabIndex = 1;
             this.DescriptionLabel.Text = "Description ";
             this.DescriptionLabel.Click += new System.EventHandler(this.DescriptionLabel_Click);
@@ -101,12 +101,12 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(89, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
