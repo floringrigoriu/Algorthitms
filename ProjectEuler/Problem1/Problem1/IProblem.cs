@@ -4,7 +4,7 @@ namespace Problem1
     /// <summary>
     /// Problem definition 
     /// </summary>
-    interface IProblem
+    interface IProblem<T>
     {
         /// <summary>
         /// what
@@ -14,6 +14,6 @@ namespace Problem1
         /// <summary>
         /// Do solve it
         /// </summary>
-        long Solve(long limit);
+        long Solve(T limit);
     }
 }

@@ -13,9 +13,15 @@ namespace Problem1
 {
     public partial class Form1 : Form
     {
+        public static IList<Type> suportedTypes = new List<Type>(){
+            typeof(IProblem<long>),
+            typeof(IProblem<string>)
+        };
         public delegate void UIUpdater(long r, Cursor c);
-        IProblem problem = null;
-
+        
+        Func<string, object> parser = null;
+        Func<object, long> solver = null;
+        
         public Form1()
         {
             InitializeComponent();
@@ -30,34 +36,40 @@ namespace Problem1
             this.DescriptionLabel.Text = "select a probem...";
         }
 
-        IEnumerable<IProblem> GetProblems(){
+        IEnumerable<Object> GetProblems(){
             var parrentAssemblies = this.GetType().Assembly;
             var problemTypes = parrentAssemblies.
                 GetTypes().
-                Where(t => t.IsClass && !t.IsAbstract && typeof(IProblem).IsAssignableFrom(t));
+                Where(t => t.IsClass && 
+                    !t.IsAbstract &&
+                    suportedTypes.Any(s=>s.IsAssignableFrom(t)));
             var problems = problemTypes.
                 Select(t => t.GetConstructor(Type.EmptyTypes)).
                 Where(c=> c!=null).
-                Select(c=>(IProblem)c.Invoke(new Object[0]));
+                Select(c=>c.Invoke(new Object[0]));
             return problems;
         }
 
         private void ComandbButton_Click(object sender, EventArgs e)
         {
-            if (this.problem == null)
+            if (this.parser == null)
             {
                 MessageBox.Show("do select a problem from the <<Operations>> menu");
                 return;
             }
-            long size = long.Parse(this.SizeTextBox.Text);
+            Compute(this.parser(this.SizeTextBox.Text));
+        }
+
+        private void Compute<T>(T input)
+        {
             var currentCursor = this.Cursor;
             this.Cursor = Cursors.WaitCursor;
-            var task = new Task<long>(()=>size);
-            var cont = task.ContinueWith<long>((r) => this.problem.Solve(r.Result))
+            var task = new Task<object>(() => input);
+            var cont = task.ContinueWith<object>((r) => this.solver(r.Result))
                .ContinueWith(r =>
-                {
-                    this.Invoke(new UIUpdater(this.UpdateUI), r.Result,  currentCursor);
-                },TaskScheduler.FromCurrentSynchronizationContext()
+               {
+                   this.Invoke(new UIUpdater(this.UpdateUI), r.Result, currentCursor);
+               }, TaskScheduler.FromCurrentSynchronizationContext()
               );
 
             task.Start(TaskScheduler.FromCurrentSynchronizationContext());
@@ -90,8 +102,26 @@ namespace Problem1
                 }
             }
             menu.Checked = true;
-            this.problem = (IProblem)menu.Tag;
-            this.DescriptionLabel.Text = this.problem.Description;
+            var problemSolver = menu.Tag;
+            if(problemSolver is IProblem<long>) {
+                DoSetup<long>(problemSolver, long.Parse);
+            }
+            else if (problemSolver is IProblem<String>)
+            {
+                DoSetup<string>(problemSolver, (i) => i);//string parser :-)
+            }
+            else 
+            {
+                throw new Exception(String.Format("type {0}", problemSolver.GetType()));
+            }
+        }
+
+        private void DoSetup<T>(object p, Func<String,T> parser)
+        {
+            var problem = (IProblem<T>)p;
+            this.parser = (string i) => { return parser(i); };
+            this.DescriptionLabel.Text = problem.Description;
+            this.solver = (object i) => problem.Solve((T)i);
         }
     }
 }
