@@ -27,6 +27,7 @@ namespace Problem1.Utils
                 {
                     long maxDivisor = 2;
                     var found = false;
+                    var upperLimit = Math.Sqrt(result);
                     foreach (var prime in primes)
                     {
                         maxDivisor = prime;
@@ -35,10 +36,14 @@ namespace Problem1.Utils
                             found = true;
                             break;
                         }
+                        if (maxDivisor > upperLimit)
+                        {
+                            break;
+                        }
                     }
                     if (!found)
                     {
-                        for (; !found && maxDivisor <= Math.Sqrt(result); maxDivisor++)
+                        for (; !found && maxDivisor <=upperLimit; maxDivisor++)
                         {
                             found = (result % maxDivisor) == 0;
                         }

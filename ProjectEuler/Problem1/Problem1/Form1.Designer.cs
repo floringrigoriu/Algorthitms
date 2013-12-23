@@ -36,6 +36,7 @@
             this.operationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.computationProgress = new System.Windows.Forms.ProgressBar();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,11 +65,11 @@
             // 
             // ResultLabel
             // 
-            this.ResultLabel.Location = new System.Drawing.Point(35, 221);
+            this.ResultLabel.Location = new System.Drawing.Point(32, 207);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.ReadOnly = true;
             this.ResultLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ResultLabel.Size = new System.Drawing.Size(218, 20);
+            this.ResultLabel.Size = new System.Drawing.Size(221, 20);
             this.ResultLabel.TabIndex = 2;
             // 
             // SizeTextBox
@@ -110,11 +111,19 @@
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // computationProgress
+            // 
+            this.computationProgress.Location = new System.Drawing.Point(32, 227);
+            this.computationProgress.Name = "computationProgress";
+            this.computationProgress.Size = new System.Drawing.Size(221, 23);
+            this.computationProgress.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.computationProgress);
             this.Controls.Add(this.SizeTextBox);
             this.Controls.Add(this.ResultLabel);
             this.Controls.Add(this.DescriptionLabel);
@@ -141,6 +150,7 @@
         private System.Windows.Forms.ToolStripMenuItem operationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ProgressBar computationProgress;
     }
 }
 

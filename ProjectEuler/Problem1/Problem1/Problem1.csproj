@@ -51,7 +51,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IProblem.cs" />
+    <Compile Include="IProgress.cs" />
     <Compile Include="Problem1.cs" />
+    <Compile Include="Problem10.cs" />
     <Compile Include="Problem2.cs" />
     <Compile Include="Problem3.cs" />
     <Compile Include="Problem4.cs" />

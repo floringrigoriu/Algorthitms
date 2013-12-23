@@ -17,23 +17,32 @@ namespace Problem1
             typeof(IProblem<long>),
             typeof(IProblem<string>)
         };
+        
         public delegate void UIUpdater(long r, Cursor c);
+        public delegate void IntUpdater(int i);
+        public delegate void VoidUpdater();
+
         
         Func<string, object> parser = null;
         Func<object, long> solver = null;
+        DateTime start = DateTime.Now;
         
         public Form1()
         {
             InitializeComponent();
             int index =0;
+            ToolStripMenuItem problemToolStripMenuItem = null;
             foreach (var p in this.GetProblems())
             { 
-                var problemToolStripMenuItem = new ToolStripMenuItem(p.GetType().Name);
+                problemToolStripMenuItem = new ToolStripMenuItem(p.GetType().Name);
                 problemToolStripMenuItem.Tag = p;
                 problemToolStripMenuItem.Click += new System.EventHandler(this.problemStripMenuItem_Click);
                 this.operationsToolStripMenuItem.DropDownItems.Insert(index++, problemToolStripMenuItem);
             }
-            this.DescriptionLabel.Text = "select a probem...";
+            if (null != problemToolStripMenuItem)
+            {
+                problemToolStripMenuItem.PerformClick();
+            }
         }
 
         IEnumerable<Object> GetProblems(){
@@ -57,6 +66,7 @@ namespace Problem1
                 MessageBox.Show("do select a problem from the <<Operations>> menu");
                 return;
             }
+            this.start = DateTime.Now;
             Compute(this.parser(this.SizeTextBox.Text));
         }
 
@@ -77,8 +87,10 @@ namespace Problem1
 
         private void UpdateUI(long r , Cursor c)
         {
+            var timeConsumed = DateTime.Now.Subtract(start);
             this.ResultLabel.Text = r.ToString();
             this.Cursor = c;
+            MessageBox.Show("Camputation took :" + timeConsumed.ToString());
         }
 
         private void DescriptionLabel_Click(object sender, EventArgs e)
@@ -114,6 +126,29 @@ namespace Problem1
             {
                 throw new Exception(String.Format("type {0}", problemSolver.GetType()));
             }
+            // setup progress
+            var progressProvider = problemSolver as IProgress;
+            if (null != progressProvider)
+            {
+                this.computationProgress.Visible = true;
+                this.computationProgress.Maximum = progressProvider.Max;
+                progressProvider.ProgressCompleted += progressProvider_ProgressCompleted;
+                progressProvider.ProgressUpdated += progressProvider_ProgressUpdated;
+            }
+            else
+            {
+                this.computationProgress.Visible = false;
+            }
+        }
+
+        void progressProvider_ProgressUpdated(object sender, int e)
+        {
+            this.Invoke(new IntUpdater((i) => this.computationProgress.Value = i), e);
+        }
+
+        void progressProvider_ProgressCompleted(object sender, EventArgs e)
+        {
+            this.Invoke(new VoidUpdater(() => this.computationProgress.Visible = false));
         }
 
         private void DoSetup<T>(object p, Func<String,T> parser)
