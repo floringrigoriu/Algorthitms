@@ -9,60 +9,65 @@ namespace Problem1.Utils
     public static class PrimeUtils
     {
         private static IList<long> primes = new List<long>(); 
+        private static long maxPrime = 1;
 
         public static long NextPrime(long current)
         {
-            var result = primes.
-                SkipWhile(i => i <= current).
-                Take(1).
-                SingleOrDefault();
-            if (default(long) != result)
+            long? result = null;
+            if (current < maxPrime)
             {
-                return result;
-            }
-            else
-            {
-                result = current + 1;
-                for (; result < int.MaxValue; result++)
+                result = primes.
+                    SkipWhile(i => i <= current).
+                    Take(1).
+                    SingleOrDefault();
+                if (default(long) != result)
                 {
-                    long maxDivisor = 2;
-                    var found = false;
-                    var upperLimit = Math.Sqrt(result);
-                    foreach (var prime in primes)
+                    return result.Value;
+                }
+            }
+            
+            result = maxPrime + 1;
+            for (; result < int.MaxValue; result++)
+            {
+                long maxDivisor = 2;
+                var found = false;
+                var upperLimit = Math.Sqrt(result.Value);
+                foreach (var prime in primes)
+                {
+                    maxDivisor = prime;
+                    if (result % prime == 0)
                     {
-                        maxDivisor = prime;
-                        if (result % prime == 0)
-                        {
-                            found = true;
-                            break;
-                        }
-                        if (maxDivisor > upperLimit)
-                        {
-                            break;
-                        }
+                        found = true;
+                        break;
+                    }
+                    if (maxDivisor > upperLimit)
+                    {
+                        break;
+                    }
+                }
+                if (!found)
+                {
+                    for (; !found && maxDivisor <= upperLimit; maxDivisor++)
+                    {
+                        found = (result % maxDivisor) == 0;
                     }
                     if (!found)
                     {
-                        for (; !found && maxDivisor <=upperLimit; maxDivisor++)
-                        {
-                            found = (result % maxDivisor) == 0;
-                        }
-                        if (!found)
-                        {
-                            primes.Add(result);
-                            return result;
-                        }
+                        maxPrime = result.Value;
+                        primes.Add(result.Value);
+                        return result.Value;
                     }
                 }
-                if (result == int.MaxValue)
-                {
-                    throw new Exception("too big !");
-                }
-                else
-                {
-                    throw new Exception("could not get here");
-                }
             }
+            if (result == long.MaxValue)
+            {
+                throw new Exception("too big !");
+            }
+            else
+            {
+                throw new Exception("could not get here");
+            }
+            
         }
 
         public static IEnumerable<long> GetPrimes()
