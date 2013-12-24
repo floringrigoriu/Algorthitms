@@ -49,6 +49,7 @@ namespace Problem1
             var parrentAssemblies = this.GetType().Assembly;
             var problemTypes = parrentAssemblies.
                 GetTypes().
+                OrderBy(t=>t.Name).
                 Where(t => t.IsClass && 
                     !t.IsAbstract &&
                     suportedTypes.Any(s=>s.IsAssignableFrom(t)));

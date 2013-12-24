@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Problem1
 {
-    class Problem8:IProblem<string>
+    class Problem_8:IProblem<string>
     {
         const int bufferSize = 5; 
 

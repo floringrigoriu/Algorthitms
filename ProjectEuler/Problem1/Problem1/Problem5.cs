@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Problem1
 {
-    public class Problem5 : IProblem<long>
+    public class Problem_5 : IProblem<long>
     {
         public string Description
         {
