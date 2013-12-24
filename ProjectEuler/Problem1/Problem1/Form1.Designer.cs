@@ -58,25 +58,31 @@
             this.DescriptionLabel.Multiline = true;
             this.DescriptionLabel.Name = "DescriptionLabel";
             this.DescriptionLabel.ReadOnly = true;
-            this.DescriptionLabel.Size = new System.Drawing.Size(221, 99);
+            this.DescriptionLabel.Size = new System.Drawing.Size(236, 99);
             this.DescriptionLabel.TabIndex = 1;
             this.DescriptionLabel.Text = "Description ";
             this.DescriptionLabel.Click += new System.EventHandler(this.DescriptionLabel_Click);
             // 
             // ResultLabel
             // 
-            this.ResultLabel.Location = new System.Drawing.Point(32, 207);
+            this.ResultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResultLabel.Location = new System.Drawing.Point(32, 259);
             this.ResultLabel.Name = "ResultLabel";
             this.ResultLabel.ReadOnly = true;
             this.ResultLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ResultLabel.Size = new System.Drawing.Size(221, 20);
+            this.ResultLabel.Size = new System.Drawing.Size(236, 20);
             this.ResultLabel.TabIndex = 2;
             // 
             // SizeTextBox
             // 
+            this.SizeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SizeTextBox.Location = new System.Drawing.Point(133, 157);
+            this.SizeTextBox.Multiline = true;
             this.SizeTextBox.Name = "SizeTextBox";
-            this.SizeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.SizeTextBox.Size = new System.Drawing.Size(135, 74);
             this.SizeTextBox.TabIndex = 3;
             this.SizeTextBox.Text = "1000";
             // 
@@ -86,7 +92,7 @@
             this.operationsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(299, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -113,16 +119,18 @@
             // 
             // computationProgress
             // 
-            this.computationProgress.Location = new System.Drawing.Point(32, 227);
+            this.computationProgress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.computationProgress.Location = new System.Drawing.Point(32, 285);
             this.computationProgress.Name = "computationProgress";
-            this.computationProgress.Size = new System.Drawing.Size(221, 23);
+            this.computationProgress.Size = new System.Drawing.Size(236, 23);
             this.computationProgress.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(299, 329);
             this.Controls.Add(this.computationProgress);
             this.Controls.Add(this.SizeTextBox);
             this.Controls.Add(this.ResultLabel);
