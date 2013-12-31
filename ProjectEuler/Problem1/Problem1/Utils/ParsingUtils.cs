@@ -20,5 +20,31 @@ namespace Problem1.Utils
                 for (int j = 0; j < lenght; j++) { result[i,j] = int.Parse(segments[i * lenght + j]);}
             return result;
         }
+
+        public static IList<IList<byte>> ParseVector(string input)
+        {
+            var result = new List<IList<byte>>();
+            IList<byte> currentList = new List<byte>();
+            foreach (var ch in input)
+            {
+                if (char.IsDigit(ch))
+                {
+                    if (currentList.Count == 0)
+                    {
+                        result.Add(currentList);
+                    }
+                    currentList.Add((byte)(ch - '0'));
+                }
+                else if (ch == '\r' || ch == '\n')
+                {
+                    currentList = new List<byte>();
+                }
+                else 
+                {
+                    throw new ArgumentException("ch");
+                }
+            }
+            return result;
+        }
     }
 }
