@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinations", "Combinations\Combinations.csproj", "{BE605527-CDFF-4416-80E9-71EABCEF26AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationTest", "CombinationTest\CombinationTest.csproj", "{EBCE0084-7943-4DD0-B3F2-8293E02DB180}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE605527-CDFF-4416-80E9-71EABCEF26AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE605527-CDFF-4416-80E9-71EABCEF26AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE605527-CDFF-4416-80E9-71EABCEF26AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE605527-CDFF-4416-80E9-71EABCEF26AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBCE0084-7943-4DD0-B3F2-8293E02DB180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCE0084-7943-4DD0-B3F2-8293E02DB180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCE0084-7943-4DD0-B3F2-8293E02DB180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCE0084-7943-4DD0-B3F2-8293E02DB180}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
