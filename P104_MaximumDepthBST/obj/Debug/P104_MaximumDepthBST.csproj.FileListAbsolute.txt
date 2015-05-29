@@ -1,0 +1,6 @@
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\bin\Debug\P104_MaximumDepthBST.exe.config
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\bin\Debug\P104_MaximumDepthBST.exe
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\bin\Debug\P104_MaximumDepthBST.pdb
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\obj\Debug\P104_MaximumDepthBST.csprojResolveAssemblyReference.cache
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\obj\Debug\P104_MaximumDepthBST.exe
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\P104_MaximumDepthBST\obj\Debug\P104_MaximumDepthBST.pdb

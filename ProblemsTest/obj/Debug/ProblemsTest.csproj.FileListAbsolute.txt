@@ -1,0 +1,7 @@
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\obj\Debug\ProblemsTest.csprojResolveAssemblyReference.cache
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\bin\Debug\ProblemsTest.dll
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\bin\Debug\ProblemsTest.pdb
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\bin\Debug\ClassLibrary1.dll
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\bin\Debug\ClassLibrary1.pdb
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\obj\Debug\ProblemsTest.dll
+C:\Users\florin\Documents\Visual Studio 2013\Projects\Algorithms\LeetCode\ProblemsTest\obj\Debug\ProblemsTest.pdb
