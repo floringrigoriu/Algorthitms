@@ -79,15 +79,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Solution_116.h" />
+    <ClInclude Include="Solution_P141.h" />
+    <ClInclude Include="Solution_P144.h" />
     <ClInclude Include="Solution_P171.h" />
     <ClInclude Include="Solution_P191.h" />
+    <ClInclude Include="Solution_P94.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Problems_CPP.cpp" />
+    <ClCompile Include="Solution_P144.cpp" />
     <ClCompile Include="Solution_P171.cpp" />
     <ClCompile Include="Solution_P191.cpp" />
+    <ClCompile Include="Solution_P217.h" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

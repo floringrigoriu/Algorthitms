@@ -12,9 +12,11 @@
 #endif
 
 #include "targetver.h"
+#include "TreeNode.h"
 
 #include <stdio.h>
 #include <tchar.h>
+#include <vector>
 
 
 
