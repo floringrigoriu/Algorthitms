@@ -86,6 +86,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="p141Test.cpp" />
     <ClCompile Include="P144_test.cpp" />
     <ClCompile Include="P171test.cpp" />
     <ClCompile Include="P217Test.cpp" />

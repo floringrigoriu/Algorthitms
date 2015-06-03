@@ -79,6 +79,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="List.h" />
     <ClInclude Include="Solution_116.h" />
     <ClInclude Include="Solution_P141.h" />
     <ClInclude Include="Solution_P144.h" />
