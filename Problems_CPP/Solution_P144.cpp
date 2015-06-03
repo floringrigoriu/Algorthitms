@@ -14,8 +14,8 @@ vector<int> Solution_P144::preorderTraversal(TreeNode* root){
 		next_nodes->pop();
 		if (current != NULL) {
 			result->push_back(current->val);
-			next_nodes->push(current->left);
 			next_nodes->push(current->right);
+			next_nodes->push(current->left);
 		}
 	}
 	delete(next_nodes);
