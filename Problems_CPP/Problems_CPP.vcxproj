@@ -80,7 +80,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h" />
-    <ClInclude Include="Solution_116.h" />
+    <ClInclude Include="Solution_P12.h" />
+    <ClInclude Include="Solution_P13.h" />
+    <ClInclude Include="Solution_P35.h" />
+    <ClInclude Include="Solution_P52.h" />
+    <ClInclude Include="Solution_P96.h" />
+    <ClInclude Include="Solution_P116.h" />
     <ClInclude Include="Solution_P141.h" />
     <ClInclude Include="Solution_P144.h" />
     <ClInclude Include="Solution_P171.h" />
@@ -88,6 +93,7 @@
     <ClInclude Include="Solution_P94.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TreeLinkNode.h" />
     <ClInclude Include="TreeNode.h" />
   </ItemGroup>
   <ItemGroup>

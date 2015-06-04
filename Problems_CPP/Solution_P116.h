@@ -40,15 +40,38 @@ After calling your function, the tree should look like:
 * };
 */
 
+// 1:25 PM - 1:35 PM plan
 
 #include "stdafx.h"
+#include "TreeLinkNode.h"
 
-class Solution {
+class Solution_P116 {
 public:
 	void connect(TreeLinkNode *root) {
+		if (root == NULL) {
+			return;
+		}
 
+		TreeLinkNode *level = root;
+		// works only for complete trees
+		while (level->left != NULL) {
+			TreeLinkNode *cur = level;
+			// for intermediar nodes connect left to right, and right to the left of the next node
+			while (cur->next !=NULL)
+			{
+				cur->left->next = cur->right;
+				cur->right->next = cur->next->left;
+				// progress on level
+				cur = cur->next;
+			}
+			// connect only the left of the last node
+			cur->left->next = cur->right;
+			// progress to next level:
+			level = level->left;
+		}
+		// that should be all
 	}
-};
+}; // end : 1:47 PM
 
 
 
