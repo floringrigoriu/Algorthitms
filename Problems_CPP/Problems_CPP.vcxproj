@@ -96,6 +96,7 @@
     <ClCompile Include="Solution_P171.cpp" />
     <ClCompile Include="Solution_P191.cpp" />
     <ClCompile Include="Solution_P217.h" />
+    <ClCompile Include="Solution_P94.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
