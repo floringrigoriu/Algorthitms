@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UnitTestUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="P116_Test.cpp" />
@@ -91,6 +92,7 @@
     <ClCompile Include="P144_test.cpp" />
     <ClCompile Include="P171test.cpp" />
     <ClCompile Include="P217Test.cpp" />
+    <ClCompile Include="P52_test.cpp" />
     <ClCompile Include="P94Test.cpp" />
     <ClCompile Include="P96Test.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -98,8 +100,12 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="P191Test.cpp" />
+    <ClCompile Include="UnitTestUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ProblemsTest\ProblemsTest.csproj">
+      <Project>{b1415450-ead0-48a5-9716-5948b7cea119}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\Problems_CPP\Problems_CPP.vcxproj">
       <Project>{55360a3e-cc86-42b0-aea2-ca78f3aa1e38}</Project>
     </ProjectReference>
