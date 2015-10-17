@@ -21,7 +21,7 @@ public class Solution_P83Test {
 		
 	}
 	
-	private void VerifyList(ListNode l1, ListNode l2) {
+	public static void VerifyList(ListNode l1, ListNode l2) {
 		while (l1 != null && l2 != null) {
 			assertEquals(l1.val , l2.val);
 			l1 = l1.next;
