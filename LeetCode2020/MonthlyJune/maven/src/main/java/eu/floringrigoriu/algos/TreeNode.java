@@ -1,3 +1,5 @@
+package eu.floringrigoriu.algos;
+
 public class TreeNode {
        int val;
        TreeNode left;

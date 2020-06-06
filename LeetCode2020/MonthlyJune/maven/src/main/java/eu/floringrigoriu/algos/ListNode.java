@@ -1,3 +1,4 @@
+package eu.floringrigoriu.algos;
 /*
   Definition for singly-linked list.
  */

@@ -1,3 +1,5 @@
+package eu.floringrigoriu.algos;
+
 import java.util.Arrays;
 
 /**
