@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="maven.src.test.java.eu.floringrigoriu.algos.AppTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="eu.floringrigoriu.algos.AppTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+7"/>
     <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-14.0.1.7-hotspot\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\florin\sources\repos\algos\LeetCode2020\MonthlyJune\maven"/>
+    <property name="maven.multiModuleProjectDirectory" value="c:\Users\florin\sources\repos\algos\LeetCode2020\MonthlyJune\maven"/>
     <property name="java.vm.vendor" value="AdoptOpenJDK"/>
     <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\florin\sources\repos\algos\LeetCode2020\MonthlyJune\maven"/>
+    <property name="user.dir" value="c:\Users\florin\sources\repos\algos\LeetCode2020\MonthlyJune\maven"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="14.0.1+7"/>
     <property name="os.arch" value="amd64"/>
@@ -43,14 +43,13 @@
     <property name="java.class.path" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
     <property name="java.home" value="C:\Program Files\AdoptOpenJDK\jdk-14.0.1.7-hotspot"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.version" value="14.0.1"/>
     <property name="java.vendor" value="AdoptOpenJDK"/>
-    <property name="sun.stderr.encoding" value="cp437"/>
     <property name="maven.home" value="C:\ProgramData\chocolatey\lib\maven\apache-maven-3.6.3\bin\.."/>
     <property name="file.separator" value="\"/>
     <property name="java.version.date" value="2020-04-14"/>
@@ -58,8 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="AdoptOpenJDK"/>
-    <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="maven.src.test.java.eu.floringrigoriu.algos.AppTest" name="testApp" time="0.003"/>
+  <testcase classname="eu.floringrigoriu.algos.AppTest" name="testApp" time="0.002"/>
 </testsuite>

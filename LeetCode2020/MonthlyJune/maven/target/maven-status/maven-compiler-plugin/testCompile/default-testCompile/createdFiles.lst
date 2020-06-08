@@ -1,2 +1,3 @@
-maven\src\test\java\eu\floringrigoriu\algos\AppTest.class
-maven\src\test\java\eu\floringrigoriu\algos\p4test.class
+eu\floringrigoriu\algos\p7Test.class
+eu\floringrigoriu\algos\p4test.class
+eu\floringrigoriu\algos\AppTest.class
